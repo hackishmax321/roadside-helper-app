@@ -7,8 +7,8 @@ const admin = require("firebase-admin");
 let server;
 mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
   logger.info('Connected to MongoDB');
-  server = app.listen(process.env.PORT || config.port, () => {
-    logger.info(`Listening to port ${config.port}`);
+  server = app.listen(process.env.PORT, () => {
+    logger.info(`Site Lanching`);
   });
 });
 
